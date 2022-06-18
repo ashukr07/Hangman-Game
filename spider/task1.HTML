@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <title>Hangman</title>
+  <style>
+body{
+  background: url(/bg.jpg) center center fixed;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+h1{
+  background-color: yellowgreen;
+  font-size: 2rem;
+  text-align: center;
+}
+.life{
+  background-color: blueviolet;
+  text-align: right;
+  font-size: 1.5rem;
+}
+.main{
+  display: flex;
+ justify-content: center;
+ flex-direction: column;
+ border: 2px solid black;
+ border-radius: 2px;
+ background-color: rgb(226, 156, 50);
+ margin: 2rem;
+ font-size: 1.5rem;
+}
+#hangmanStand{
+  height: 13rem;
+  width: 13rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.btn{
+  height: 2rem;
+  width: 6rem;
+  background-color: aquamarine;
+  text-align: center;
+  margin: 0.3rem;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+.btn:hover{
+  background-color: red;
+}
+#Play{
+  display: block;
+  margin: auto;
+}
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Hangman</h1>
+  <div class="life">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+  <div class="main">
+    <img id='hangmanStand' src="images/hangstand.png" alt="">
+    <p> Guess the word associated with room </p>
+    <p id="wordSpotlight">The word to be guessed goes here</p>
+    <div id="keyboard"></div>
+  </div> 
+  <button class="btn" id="Play" onClick="reset()">Play Again</button>
+</div>
+
+<script src='./JS/hangman.js'></script>
+</body>
+</html>
